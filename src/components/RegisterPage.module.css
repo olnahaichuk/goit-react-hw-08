@@ -1,0 +1,66 @@
+.form {
+    border: 1px solid black;
+    padding: 20px;
+    margin-top: 10px;
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+.inputField{
+    display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        color: #333;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+}
+.label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+        width: 100%;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 16px;
+        color: #333;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease;
+}
+
+.checkboxLabel {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.statusWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.submitBtn {
+    border: none;
+    margin: 0 auto;
+    padding: 10px 20px;
+    min-width: 140px;
+    border-radius: 15px;
+    background-color: #aeaeae;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.errorText {
+    font-size:20px;
+    color: red;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 5px;
+}
