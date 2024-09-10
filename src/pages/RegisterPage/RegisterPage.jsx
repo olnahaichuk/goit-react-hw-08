@@ -1,9 +1,9 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from "yup";
-import css from "../components/RegisterPage.module.css"
+import css from "./RegisterPage.module.css"
 import { useDispatch, useSelector } from 'react-redux';
-import { apiRegister } from '../redux/auth/operations';
-import { selectAuthError } from '../redux/auth/selectors';
+import { apiRegister } from '../../redux/auth/operations';
+import { selectAuthError } from '../../redux/auth/selectors';
 
 
 

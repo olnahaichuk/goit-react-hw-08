@@ -3,7 +3,8 @@ import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from "yup";
 import { nanoid } from 'nanoid';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactsOps';
+import { addContact } from '../../redux/contacts/operations';
+import toast from 'react-hot-toast';
 
 const phoneRegExp = /^[0-9]{3}-[0-9]{2}-[0-9]{2}$/
 
@@ -29,7 +30,19 @@ const ContactForm = () => {
             name: values.name,
             number: values.number,
         };
-        dispatch(addContact(newContact));
+        dispatch(addContact(newContact)).unwrap().then(() => {
+            toast('Contact added',
+  {
+    icon: '✅',
+    style: {
+      borderRadius: '10px',
+      fontSize:'25px',
+      background: '#333',
+      color: '#fff',
+    },
+  }
+);
+        });
         resetForm();
     }
     

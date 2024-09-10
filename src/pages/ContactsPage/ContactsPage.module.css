@@ -1,0 +1,12 @@
+.phonebookTitle{
+    text-align: center;
+    font-size: 50px;
+}
+.errorText {
+    font-size: 20px;
+    color: red;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 5px;
+}

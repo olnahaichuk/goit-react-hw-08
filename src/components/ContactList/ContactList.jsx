@@ -1,8 +1,9 @@
 import css from './ContactList.module.css'
 import Contact from "../Contact/Contact"; 
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContact } from '../../redux/contactsOps';
-import {  selectFilteredContacts } from '../../redux/contacts.selectors';
+import { deleteContact } from '../../redux/contacts/operations';
+import {  selectFilteredContacts } from '../../redux/contacts/selectors';
+import toast from 'react-hot-toast';
 
 
 const ContactList = () => {
@@ -12,7 +13,11 @@ const ContactList = () => {
   const filter = useSelector(selectFilteredContacts);
 
   const handleDeleteContact = (contactId) => {
-    dispatch(deleteContact(contactId));
+    dispatch(deleteContact(contactId).unwrap().then(() => {
+      toast.success("Contact deleted successfully")
+    }
+      
+    ));
 
   }
 
@@ -25,8 +30,6 @@ const ContactList = () => {
         onDeleteContact={handleDeleteContact} />))
            ) :
             <p>No contacts availible</p>}
-         
-    
     </div>
   )
 }
