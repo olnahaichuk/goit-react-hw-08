@@ -26,7 +26,7 @@ const LoginPage = () => {
   }
   const handleSubmit = (values) => {
     dispatch(apiLoginIn(values));
-    console.log("values:", values);
+    
     
   }
 
