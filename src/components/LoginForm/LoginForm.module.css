@@ -7,29 +7,30 @@
     border-radius: 10px;
     margin: 15px auto 15px auto;
 }
-.inputField{
+.inputField {
     display: block;
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        color: #333;
-        box-sizing: border-box;
-        transition: border-color 0.3s ease;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
 }
+
 .label {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-        width: 100%;
-        padding: 10px;
-        border-radius: 4px;
-        font-size: 16px;
-        color: #333;
-        box-sizing: border-box;
-        transition: border-color 0.3s ease;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
 }
 
 .checkboxLabel {
@@ -58,7 +59,7 @@
 }
 
 .errorText {
-    font-size:20px;
+    font-size: 20px;
     color: red;
     background-color: antiquewhite;
     border-radius: 5px;

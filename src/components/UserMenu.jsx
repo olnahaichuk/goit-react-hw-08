@@ -1,5 +1,4 @@
-import clsx from "clsx"
-import { NavLink } from "react-router-dom"
+
 import css from "./AppBar/AppBar.module.css"
 import { selectAuthUser } from "../redux/auth/selectors";
 import { useDispatch, useSelector } from "react-redux";
@@ -23,14 +22,6 @@ const UserMenu = () => {
     }
     return (
       <>
-              <NavLink
-                className={({ isActive }) =>
-                  clsx(css.link, isActive && css.active)
-                }
-                to="/contacts"
-              >
-                Contacts
-              </NavLink>
               <div>
                 <p className={css.userInfo }>Hello, {user.name}!</p>
                 <p className={css.userInfo }>Email: {user.email}</p>

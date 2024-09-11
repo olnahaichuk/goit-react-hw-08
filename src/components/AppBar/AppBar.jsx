@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import css from "./AppBar.module.css"
 
 import AuthNav from "../AuthNav";
-import Navigation from "../Navigation";
+import Navigation from "../Navigation/Navigation";
 import UserMenu from "../UserMenu";
 
 const AppBar = () => {
