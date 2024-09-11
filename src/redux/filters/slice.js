@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-import axios from "axios";
+import { instance } from "../auth/operations";
 
 const INITIAL_STATE = {
   contacts: [],
@@ -13,9 +13,7 @@ export const fetchContactsByQuery = createAsyncThunk(
   "contacts/getAllByQuery",
   async (query, thunkApi) => {
     try {
-      const { data } = await axios.get(
-        `https://66d06abc181d059277de845b.mockapi.io/contacts?search=${query}`
-      );
+      const { data } = await instance.get(`/contacts?search=${query}`);
       return data;
     } catch (error) {
       return thunkApi.rejectWithValue(error.message);
